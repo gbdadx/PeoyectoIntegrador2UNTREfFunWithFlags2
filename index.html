@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme-value="auto">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun with flags</title>
+    <link rel="shortcut icon"
+        href="./img/png-transparent-rock-paper-scissors-rock-paper-scissors-lizard-spock-sheldon-cooper-rockpaperscissorslizardspock-television-blue-game-thumbnail.png"
+        type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="container-fluid  ">
+    <div class="dropdown position-fixed top-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid  iamgenF">
+        <header class="py-2  border-bottom">
+            <nav class="py-2  border-bottom">
+                <div class="container d-flex flex-wrap">
+                    <ul class="nav me-auto">
+
+                        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Features</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">About</a></li>
+                    </ul>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Login</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Sign up</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <header class="py-3 mb-4 border-bottom">
+            <div class="container d-flex flex-wrap justify-content-center">
+                <a href="#"
+                    class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                    <span class="fs-4">Fun With Flags</span>
+                </a>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
+                    <input type="text" class="form-control searchCountry" placeholder="Search..." aria-label="Search">
+                </form>
+            </div>
+        </header>
+
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark container-fluid">
+            <div class="container-fluid">
+
+                <div class="d-flex gap-2 justify-content-center py-5">
+                    <button class="btn btnCont btn-primary rounded-pill px-3" id="africa" type="button">Africa</button>
+                    <button class="btn btnCont btn-secondary rounded-pill px-3" id="america"
+                        type="button">America</button>
+                    <button class="btn btnCont btn-success rounded-pill px-3" id="asia" type="button">Asia</button>
+                    <button class="btn btnCont btn-danger rounded-pill px-3" id="europa" type="button">Europe</button>
+                    <button class="btn btnCont btn-info rounded-pill px-3" id="oceania" type="button">Oceania</button>
+                    <button class="btn btnCont btn-light rounded-pill px-3" id="antartida"
+                        type="button">Antarctica</button>
+                </div>
+
+
+            </div>
+        </nav>
+
+    </div>
+    <main class="container-fluid">
+
+
+        <div class="container contenedor">
+
+
+        </div>
+    </main>
+    <footer class="container-fluid flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 GBD, Leo & Gyfu</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#twitter"></use>
+                    </svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#instagram"></use>
+                    </svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#facebook"></use>
+                    </svg></a></li>
+        </ul>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+   
+    <script src="./js/fetchs.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
