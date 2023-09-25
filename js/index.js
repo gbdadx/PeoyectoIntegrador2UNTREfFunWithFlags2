@@ -84,10 +84,14 @@ if (!data) {
   });
 
   /*eventos Search */
-  /*eventos Search */
-  const searchCountry = document.querySelector('.searchCountry');
-  searchCountry.addEventListener('input', (e) => {
-    const valor = e.target.value.trim().toLowerCase();
+
+  let temporizador;
+
+  const searchCountry = document.querySelector('#barraSearch');
+  
+// Tu función de búsqueda en el objeto JSON
+function buscarPais(valorinput) {
+    const valor = valorinput.trim().toLowerCase();
     const paises = Object.values(objeto);
     let paiss = [];
   
@@ -103,5 +107,24 @@ if (!data) {
       }
     }
     agregarTarjetas(paiss);
-  });}
+  };
+  
+  //searchCountry.addEventListener('keyup', buscarPais);
+
+// Agrega un event listener al input de búsqueda
+searchCountry.addEventListener('input', function(e) {
+  // Borra el temporizador existente si hay uno
+  clearTimeout(temporizador);
+
+  // Establece un nuevo temporizador para retrasar la búsqueda
+  temporizador = setTimeout(function() {
+    const valorInput = e.target.value;
+    buscarPais(valorInput);
+  }, 300); // 300 milisegundos (ajusta este valor según tus necesidades)
+});
+
+
+
+
+}
   

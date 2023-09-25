@@ -1,3 +1,5 @@
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +14,10 @@ a {
 
 ul {
     list-style: none;
+}
+.dark{
+    background-color: darkviolet;
+    color:white;
 }
 
 main{
@@ -34,4 +40,24 @@ main{
 }
 .main2{
     margin-top: 0;
+}
+
+.buttonsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    margin: 1rem;
+    gap:1rem;
+
+    
+}
+ input{
+    color:black;
+    font-weight: 700;
+ }
+@media(width<800){
+    .bd-mode-toggle{
+        display: none;
+    }
 }
