@@ -9,7 +9,7 @@ console.log(pais); // Acceder a la propiedad name.common, por ejemplo
  h1.innerHTML=pais.name.common;
 
 const mapa=document.querySelector('.lead');
-let imagen= pais.coatOfArms.png ?? pais.coatOfArms.svg ?? '../img/bazinga.png' ;
+let imagen= pais.coatOfArms.png ?? pais.coatOfArms.svg ?? './img/bazinga.png' ;
 mapa.innerHTML=` <img src="${imagen}" alt="coat Of Arms" class="imagenDetalle1">`;
 console.log(pais.name.common)
 
