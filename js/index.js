@@ -44,7 +44,7 @@ if (!data) {
 
       contenedor.innerHTML += tarjeta;
     });
-  
+
     eventoBtnTarjetas(paises);
   }
 
@@ -88,17 +88,17 @@ if (!data) {
   let temporizador;
 
   const searchCountry = document.querySelector('#barraSearch');
-  
-// Tu función de búsqueda en el objeto JSON
-function buscarPais(valorinput) {
+
+  // Tu función de búsqueda en el objeto JSON
+  function buscarPais(valorinput) {
     const valor = valorinput.trim().toLowerCase();
     const paises = Object.values(objeto);
     let paiss = [];
-  
+
     for (let e of paises) {
       const nombreComun = e.name.common.toLowerCase();
       const nombreOficial = e.name.official.toLowerCase();
-  
+
       if (
         (nombreComun.length >= 4 && nombreComun.includes(valor)) ||
         (nombreOficial.length >= 4 && nombreOficial.includes(valor))
@@ -108,23 +108,15 @@ function buscarPais(valorinput) {
     }
     agregarTarjetas(paiss);
   };
-  
-  //searchCountry.addEventListener('keyup', buscarPais);
-
-// Agrega un event listener al input de búsqueda
-searchCountry.addEventListener('input', function(e) {
-  // Borra el temporizador existente si hay uno
-  clearTimeout(temporizador);
-
-  // Establece un nuevo temporizador para retrasar la búsqueda
-  temporizador = setTimeout(function() {
-    const valorInput = e.target.value;
-    buscarPais(valorInput);
-  }, 300); // 300 milisegundos (ajusta este valor según tus necesidades)
-});
+  searchCountry.addEventListener('input', function (e) {
+    clearTimeout(temporizador);
+    temporizador = setTimeout(function () {
+      const valorInput = e.target.value;
+      buscarPais(valorInput);
+    }, 300); // 300 milisegundos 
+  });
 
 
 
 
 }
-  
