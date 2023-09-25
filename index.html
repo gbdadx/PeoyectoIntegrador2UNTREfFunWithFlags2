@@ -15,10 +15,59 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body class="container-fluid d-flex flex-wrap ">
-
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center show" id="bd-theme"
+            type="button" aria-expanded="true" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow show" aria-labelledby="bd-theme-text"
+            style="position: absolute; inset: auto 0px 0px auto; margin: 0px; transform: translate3d(0px, -44px, 0px);"
+            data-popper-placement="top-end">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
 
 
 
@@ -41,28 +90,29 @@
         <header class="py-3 mb-4 border-bottom">
             <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Fun With Flags(bis)</a>
-                  
+                    <a class="navbar-brand" href="#">Fun With Flags(bis)</a>
+
                     <form role="search">
-                      <input class="form-control" id="barraSearch"  type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control" id="barraSearch" type="search" placeholder="Search"
+                            aria-label="Search">
                     </form>
-                  </div>
                 </div>
-              </nav>
-        </header>
+    </div>
+    </nav>
+    </header>
 
 
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark container-fluid py-2">
-            <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center buttonsContainer">
-                <button class="btn btnCont btn-primary rounded-pill px-3" id="africa" type="button">Africa</button>
-                <button class="btn btnCont btn-secondary rounded-pill px-3" id="america" type="button">America</button>
-                <button class="btn btnCont btn-success rounded-pill px-3" id="asia" type="button">Asia</button>
-                <button class="btn btnCont btn-danger rounded-pill px-3" id="europa" type="button">Europe</button>
-                <button class="btn btnCont btn-info rounded-pill px-3" id="oceania" type="button">Oceania</button>
-                <button class="btn btnCont btn-light rounded-pill px-3" id="antartida" type="button">Antarctica</button>
-            </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark container-fluid py-2">
+        <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center buttonsContainer">
+            <button class="btn btnCont btn-primary rounded-pill px-3" id="africa" type="button">Africa</button>
+            <button class="btn btnCont btn-secondary rounded-pill px-3" id="america" type="button">America</button>
+            <button class="btn btnCont btn-success rounded-pill px-3" id="asia" type="button">Asia</button>
+            <button class="btn btnCont btn-danger rounded-pill px-3" id="europa" type="button">Europe</button>
+            <button class="btn btnCont btn-info rounded-pill px-3" id="oceania" type="button">Oceania</button>
+            <button class="btn btnCont btn-light rounded-pill px-3" id="antartida" type="button">Antarctica</button>
+        </div>
 
-        </nav>
+    </nav>
 
     </div>
     <main class="container-fluid">
@@ -99,10 +149,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
+    <script  src="./js/theme.js"></script>
     <script src="./js/fetchs.js"></script>
     <script src="./js/index.js"></script>
-    <script src="./js/theme.js"></script>
 
 </body>
 

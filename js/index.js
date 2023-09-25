@@ -2,28 +2,25 @@
  * leer el localstorage: objeto
  */
 
-// Obtener el objeto JSON almacenado en el localStorage
 const data = JSON.parse(localStorage.getItem('objeto'));
 
 // Verificar si se pudo obtener el objeto del localStorage
 if (!data) {
   console.log('No se pudo obtener el objeto del localStorage');
 } else {
-  // Supongamos que obtuviste el JSON de la API externa y lo almacenaste en 'objeto'
   const objeto = data;
 
   // Función para agregar tarjetas al contenedor
   function agregarTarjetas(paises) {
     const contenedor = document.querySelector('.contenedor');
 
-    // Ordenar los países por nombre común
     paises.sort((a, b) => {
       const nombreA = a.name.common.toLowerCase();
       const nombreB = b.name.common.toLowerCase();
       return nombreA.localeCompare(nombreB);
     });
 
-    contenedor.innerHTML = ''; // Limpia el contenido anterior
+    contenedor.innerHTML = ''; 
 
     paises.forEach((pais, index) => {
       const nombreComun = pais.name.common || '';
