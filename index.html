@@ -6,31 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun with flags</title>
     <link rel="shortcut icon"
-        href="./img/png-transparent-rock-paper-scissors-rock-paper-scissors-lizard-spock-sheldon-cooper-rockpaperscissorslizardspock-television-blue-game-thumbnail.png"
+        href="./img/pngwingdorado.png"
         type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+        <script src="https://kit.fontawesome.com/cee4e31326.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
 <body class="container-fluid d-flex flex-wrap ">
-       <!--
- <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center show" id="bd-theme"
-            type="button" aria-expanded="true" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+  <div id="contenedorBotonesUpDown">
+
+   <div class="botonesUP" id="botonesUP">
+        <button class="btn btn-outline-secondary btnUp" id="up"><i class="fa-solid fa-arrow-up"></i></button>
+   </div>
+
+        <div class="botonesDown" id="botonesDown">
+        <button  class="btn btn-outline-secondary btnDown" id="down"><i class="fa-solid fa-arrow-down"></i></button>
+    </div>
+</div>
+
+    <!-- Inicio Toggle modo dark -->
+    <div class="dropdown position-absolute bottom-0 end-0 mt-3 me-5 bd-mode-toggle">
+        <button class="btn btn-bd-primary btn-circle py-2 dropdown-toggle d-flex align-items-center" id="bd-theme"
+            type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><i
+                class="fa-solid fa-circle-half-stroke fa-2xl"></i>
             <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
                 <use href="#circle-half"></use>
             </svg>
             <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
         </button>
-        <ul class="dropdown-menu dropdown-menu-end shadow show" aria-labelledby="bd-theme-text"
-            style="position: absolute; inset: auto 0px 0px auto; margin: 0px; transform: translate3d(0px, -44px, 0px);"
-            data-popper-placement="top-end">
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
             <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
                     aria-pressed="false">
@@ -69,17 +79,14 @@
             </li>
         </ul>
     </div>
-        -->
-
-
+    <!-- Fin Toggle modo dark -->
 
     <div class="container-fluid  iamgenF">
         <header class="py-2  border-bottom">
-            <nav class="py-2  border-bottom">
+            <nav class="py-2  border-bottom primernav">
                 <div class="container d-flex flex-wrap">
                     <ul class="nav me-auto">
 
-                        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Features</a></li>
                         <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">About</a></li>
                     </ul>
                     <ul class="nav">
@@ -92,7 +99,7 @@
         <header class="py-3 mb-4 border-bottom">
             <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Fun With Flags(bis)</a>
+                    <a class="navbar-brand " href="#">Fun With Flags(bis)</a>
 
                     <form role="search">
                         <input class="form-control" id="barraSearch" type="search" placeholder="Search"
@@ -149,10 +156,11 @@
                     </svg></a></li>
         </ul>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script  src="./js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="./js/theme.js"></script>
+
     <script src="./js/fetchs.js"></script>
     <script src="./js/index.js"></script>
 

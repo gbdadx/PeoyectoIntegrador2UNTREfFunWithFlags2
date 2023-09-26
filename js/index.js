@@ -117,3 +117,40 @@ if (!data) {
 
 
 }
+
+/** botones scroll */
+const contenedor = document.getElementById('contenedor');
+const contenido = document.getElementById('contenido');
+const scrollArribaBtn = document.querySelector('.btnUp');
+const scrollAbajoBtn = document.querySelector('.btnDown');
+
+let scrollInterval;
+
+// Función para hacer scroll hacia arriba
+function scrollArriba() {
+  event.stopPropagation(); // Evita que el evento se propague al contenedor
+
+  scrollInterval = setInterval(() => {
+    window.scrollBy(0, -1000); // Ajusta la velocidad de desplazamiento aquí
+  }, 10);
+}
+
+// Función para hacer scroll hacia abajo
+function scrollAbajo() {
+  event.stopPropagation(); // Evita que el evento se propague al contenedor
+  scrollInterval = setInterval(() => {
+    window.scrollBy(0, 1000); // Ajusta la velocidad de desplazamiento aquí
+  }, 10);
+}
+
+// Detener el scroll cuando se suelta el botón
+function detenerScroll() {
+  clearInterval(scrollInterval);
+}
+
+scrollArribaBtn.addEventListener('mousedown', scrollArriba);
+scrollAbajoBtn.addEventListener('mousedown', scrollAbajo);
+
+// Detener el scroll cuando se suelta el botón en cualquier parte de la ventana
+window.addEventListener('mouseup', detenerScroll);
+

@@ -1,0 +1,20 @@
+
+
+
+
+
+pais.capital
+ pais.capitalInfo
+ pais.altSpellings
+pais.demonyms
+pais.currencies
+
+ pais.region
+ pais.subregion
+ pais.languages
+pais.population
+ pais.latlng
+ pais.area
+ pais.startOfWeek
+ pais.timezones
+ pais.maps
