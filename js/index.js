@@ -147,9 +147,25 @@ function scrollAbajo() {
 function detenerScroll() {
   clearInterval(scrollInterval);
 }
-
+/*
 scrollArribaBtn.addEventListener('mousedown', scrollArriba);
 scrollAbajoBtn.addEventListener('mousedown', scrollAbajo);
+*/
+//incorporado para los eventos en moviles
+// Manejo de eventos táctiles (touchstart) junto con eventos de ratón (mousedown)
+scrollArribaBtn.addEventListener('mousedown', scrollArriba);
+scrollAbajoBtn.addEventListener('mousedown', scrollAbajo);
+
+scrollArribaBtn.addEventListener('touchstart', scrollArriba);
+scrollAbajoBtn.addEventListener('touchstart', scrollAbajo);
+
+// También se puede agregar eventos touchend para detener el scroll en dispositivos táctiles
+scrollArribaBtn.addEventListener('mouseup', detenerScroll);
+scrollAbajoBtn.addEventListener('mouseup', detenerScroll);
+
+scrollArribaBtn.addEventListener('touchend', detenerScroll);
+scrollAbajoBtn.addEventListener('touchend', detenerScroll);
+
 
 // Detener el scroll cuando se suelta el botón en cualquier parte de la ventana
 window.addEventListener('mouseup', detenerScroll);
