@@ -151,3 +151,8 @@ input {
         justify-content: center;
     }
 }
+@media(width<900){
+    .bd-mode-toggle{
+        display:none;
+    }
+}
