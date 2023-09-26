@@ -25,12 +25,34 @@ main {
     padding: 2rem;
     margin: 1rem;
 }
-#footer{
+
+#footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+
+}
+
+footer div a {
+    text-decoration: none;
+    padding: 2rem;
+}
+
+
+
+
+
 .btn-circle {
     width: fit-content;
     height: fit-content;
@@ -43,6 +65,7 @@ main {
     bottom: 15rem;
     right: 3rem;
 }
+
 #contenedorBotonesUpDown {
     position: fixed;
     bottom: 6rem;
@@ -64,15 +87,17 @@ main {
     align-items: center;
     justify-content: center;
     width: 4rem;
-    height:4rem;
+    height: 4rem;
     padding: 0.5rem;
 
 }
-.btnDown{
+
+.btnDown {
     border-radius: 0px 0px 16px 16px;
 }
-.btnUp{
-    border-radius: 16px 16px 0px 0px ;
+
+.btnUp {
+    border-radius: 16px 16px 0px 0px;
 }
 
 
@@ -147,4 +172,23 @@ input {
         align-items: center;
         justify-content: center;
     }
+}
+
+@media(width>900) {
+    #footer {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    F#footer div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+    }
+
 }
