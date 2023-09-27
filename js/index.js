@@ -1,3 +1,16 @@
+/*funciona usando el fetch contra el json o contra la api */
+
+//let enlace = 'https://restcountries.com/v3.1/all';
+let enlace = './countries.json';
+
+  fetch(enlace)
+    .then(response => response.json())
+    .then(data =>{
+		localStorage.setItem("objeto", JSON.stringify(data));
+	})
+	.catch(error => console.error('Error:', error));
+
+
 /**
  * leer el localstorage: objeto
  */
@@ -36,7 +49,7 @@ if (!data) {
         <div class="card-body">
           <h5 class="card-title">${nombreComun}</h5>
           <p class="card-text">${nombreOficial}</p>
-          <p class="card-text">Continente: ${continente}</p>
+          <p class="card-text">Continent: ${continente}</p>
           <a href="#" class="btn btn-primary btnCard" data-index="${index}">Detail</a>
         </div>
       </div>`;
