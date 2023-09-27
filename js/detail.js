@@ -60,3 +60,16 @@ btnDreturn.addEventListener('click', (e) => {
 /*  incorporar link de national anthems info .*/
 // https://nationalanthems.info/es.htm
 // const anthem= pais.cca2.htm;
+
+
+/*color mode */
+const body = document.body;
+
+
+// Comprobar la preferencia almacenada y aplicarla al cargar la página
+const savedColorMode = localStorage.getItem('colorMode');
+if (savedColorMode === 'dark') {
+    body.classList.add('dark-mode');
+} else if (savedColorMode === 'light') {
+    body.classList.add('light-mode');
+}

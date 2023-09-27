@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,20 +13,59 @@
 
 }
 
-a {
-    text-decoration: none;
-    color: initial;
+body {
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+body.dark-mode{
+    background-color: black;
+    color: white;
+}
+
+body.light-mode{
+    background-color: white;
+    color: black;
+}
+/* Estilos para el modo oscuro */
+.dark-mode a {
+    color: #ffffff; /* Cambia el color de los enlaces en modo oscuro */
+}
+.dark-mode h1{
+    color:cornsilk;
+    font-family:cursive;
+}
+/* Estilos para el modo claro */
+.light-mode a {
+    color: #000000; /* Cambia el color de los enlaces en modo claro */
+}
+.dark-mode .login, .dark-mode .about, .dark-mode .register {
+    color:antiquewhite;
+    font-family:cursive;
+    border: solid 2px antiquewhite;
+    font-weight: 500;
+
+}
+.light-mode .login, .light-mode .about, .light-mode .register {
+    color:lightslategray;
+    font-family:cursive;
+    border: solid 2px lightslategray;
+    font-weight: 500;
+
+}
+
+.login {
+    margin-right: 2rem;
+}
 
 ul {
     list-style: none;
 }
 
-.dark {
-    background-color: darkviolet;
-    color: white;
-}
 
 main {
     padding: 2rem;
@@ -32,6 +78,10 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.dark-mode footer{
+    color:antiquewhite!important;
+
 }
 
 footer div {
@@ -49,18 +99,6 @@ footer div a {
     padding: 2rem;
 }
 
-.btn-circle {
-    width: fit-content;
-    height: fit-content;
-    padding: .3rem 0px;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.42857;
-    position: fixed;
-    bottom: 15rem;
-    right: 3rem;
-}
 
 #contenedorBotonesUpDown {
     position: fixed;
@@ -172,34 +210,38 @@ input {
 
 
 
-.btn-circle {
-    width: 30px;
-    height: 30px;
+#toggleButton {
+    width: 3rem;
+    height: 3rem;
     padding: 6px 0px;
-    border-radius: 15px;
+    border-radius: 50px;
     text-align: center;
     font-size: 12px;
     line-height: 1.42857;
-    position: absolute;
-    top: 3rem;
+    position: fixed;
+    top: 20rem;
     right: 3rem;
+    background-image: url('../img/circle-half-stroke-solid.svg');
+    background-size: cover;
+    background-repeat: repeat;
 }
 
 
 /* boton toggle dark-light*/
-#bd-theme {
+#toggleButton {
     font-size: larger;
 }
 
 
-.bd-mode-toggle {
+
+#toggleButton {
     z-index: 1500;
 }
 
 
 @media(width <450px) {
-   
-    .dropdown {
+
+    #toggleButton {
         display: none;
     }
 }
