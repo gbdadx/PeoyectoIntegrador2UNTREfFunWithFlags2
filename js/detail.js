@@ -1,10 +1,7 @@
 
-
 // Recuperar el objeto pais almacenado en localStorage
 const pais = JSON.parse(localStorage.getItem('pais'));
 console.log(pais)
-// Ahora puedes utilizar los datos del país en esta página para mostrar detalles
-console.log(pais); // Acceder a la propiedad name.common, por ejemplo
 
 
 const mapa = document.querySelector('.lead');
@@ -27,9 +24,7 @@ function fillingAsideDetails(pais) {
     const small5 = costoVidaCapital;
     const wiki = `https://en.wikipedia.org/wiki/${pa}`;
     const small6 = wiki;
-    //const small6=pais.region;
     console.log(`capital  ${small1}`);
-   /*  incorporar link de national anthems info .*/
 const anthem= pais.cca2;
 const linkanthem=`https://nationalanthems.info/${anthem}.htm`;
 const small7= linkanthem;
@@ -61,16 +56,6 @@ btnDreturn.addEventListener('click', (e) => {
     window.location.href = './index.html';
 });
 
-
-/*
-const small7=pais.subregion
-const small8=pais.languages
-const small9=pais.population
-const small10=pais.latlng
-const small11=pais.area
-const small12=pais.startOfWeek
-const small13=pais.timezones
-const small14=pais.maps */
 
 /*  incorporar link de national anthems info .*/
 // https://nationalanthems.info/es.htm

@@ -49,10 +49,6 @@ footer div a {
     padding: 2rem;
 }
 
-
-
-
-
 .btn-circle {
     width: fit-content;
     height: fit-content;
@@ -174,7 +170,41 @@ input {
     }
 }
 
-@media(width>900) {
+
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+}
+
+
+/* boton toggle dark-light*/
+#bd-theme {
+    font-size: larger;
+}
+
+
+.bd-mode-toggle {
+    z-index: 1500;
+}
+
+
+@media(width <450px) {
+   
+    .dropdown {
+        display: none;
+    }
+}
+
+@media(width>900px) {
     #footer {
         display: flex;
         flex-direction: row !important;

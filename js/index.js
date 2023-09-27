@@ -1,6 +1,18 @@
 /**
  * leer el localstorage: objeto
  */
+/*funciona usando el fetch contra el json o contra la api */
+
+//let enlace = 'https://restcountries.com/v3.1/all';
+let enlace = './countries.json';
+
+  fetch(enlace)
+    .then(response => response.json())
+    .then(data =>{
+		localStorage.setItem("objeto", JSON.stringify(data));
+	})
+	.catch(error => console.error('Error:', error));
+
 
 const data = JSON.parse(localStorage.getItem('objeto'));
 
@@ -86,7 +98,7 @@ if (!data) {
 
   const searchCountry = document.querySelector('#barraSearch');
 
-  // Tu función de búsqueda en el objeto JSON
+  //  función de búsqueda en el objeto JSON
   function buscarPais(valorinput) {
     const valor = valorinput.trim().toLowerCase();
     const paises = Object.values(objeto);
@@ -113,10 +125,7 @@ if (!data) {
     }, 300); // 300 milisegundos 
   });
 
-
-
-
-}
+}//fin ELSE de Verificar si se pudo obtener el objeto del localStorage
 
 /** botones scroll */
 const contenedor = document.getElementById('contenedor');
@@ -173,3 +182,4 @@ window.addEventListener('mouseup', detenerScroll);
 
 
 /***  SIGN IN    SIGN UP    CONTACT MODALS */
+
