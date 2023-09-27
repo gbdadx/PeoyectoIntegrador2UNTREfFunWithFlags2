@@ -131,7 +131,7 @@ function scrollArriba() {
   event.stopPropagation(); // Evita que el evento se propague al contenedor
 
   scrollInterval = setInterval(() => {
-    window.scrollBy(0, -1000); // Ajusta la velocidad de desplazamiento aquí
+    window.scrollBy(0, -300); // Ajusta la velocidad de desplazamiento aquí
   }, 10);
 }
 
@@ -139,7 +139,7 @@ function scrollArriba() {
 function scrollAbajo() {
   event.stopPropagation(); // Evita que el evento se propague al contenedor
   scrollInterval = setInterval(() => {
-    window.scrollBy(0, 1000); // Ajusta la velocidad de desplazamiento aquí
+    window.scrollBy(0, 300); // Ajusta la velocidad de desplazamiento aquí
   }, 10);
 }
 
