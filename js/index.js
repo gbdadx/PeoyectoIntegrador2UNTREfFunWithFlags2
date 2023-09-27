@@ -170,3 +170,6 @@ scrollAbajoBtn.addEventListener('touchend', detenerScroll);
 // Detener el scroll cuando se suelta el botón en cualquier parte de la ventana
 window.addEventListener('mouseup', detenerScroll);
 
+
+
+/***  SIGN IN    SIGN UP    CONTACT MODALS */

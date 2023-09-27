@@ -1,5 +1,37 @@
 
-
+name
+VM576:1 tld
+VM576:1 cca2
+VM576:1 ccn3
+VM576:1 cca3
+VM576:1 cioc
+VM576:1 independent
+VM576:1 status
+VM576:1 unMember
+VM576:1 currencies
+VM576:1 idd
+VM576:1 capital
+VM576:1 altSpellings
+VM576:1 region
+VM576:1 subregion
+VM576:1 languages
+VM576:1 translations
+VM576:1 latlng
+VM576:1 landlocked
+VM576:1 borders
+VM576:1 area
+VM576:1 demonyms
+VM576:1 flag
+VM576:1 maps
+VM576:1 population
+VM576:1 fifa
+VM576:1 car
+VM576:1 timezones
+VM576:1 continents
+VM576:1 flags
+VM576:1 coatOfArms
+VM576:1 startOfWeek
+VM576:1 capitalInfo
 
 
 
