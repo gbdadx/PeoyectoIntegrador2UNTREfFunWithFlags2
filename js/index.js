@@ -1,7 +1,7 @@
 /*funciona usando el fetch contra el json o contra la api */
 
-//let enlace = 'https://restcountries.com/v3.1/all';
-let enlace = './countries.json';
+let enlace = 'https://restcountries.com/v3.1/all';
+//let enlace = './countries.json';
 
   fetch(enlace)
     .then(response => response.json())
@@ -159,10 +159,7 @@ function scrollAbajo() {
 function detenerScroll() {
   clearInterval(scrollInterval);
 }
-/*
-scrollArribaBtn.addEventListener('mousedown', scrollArriba);
-scrollAbajoBtn.addEventListener('mousedown', scrollAbajo);
-*/
+
 //incorporado para los eventos en moviles
 // Manejo de eventos táctiles (touchstart) junto con eventos de ratón (mousedown)
 scrollArribaBtn.addEventListener('mousedown', scrollArriba);

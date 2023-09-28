@@ -30,11 +30,6 @@
 
 
 
-
-
-
-
-
     <!--  END MODALS-->
 
     <div class="container-fluid  iamgenF">
@@ -46,9 +41,9 @@
                         <li><button type="button" class="btn  about">About</button>
                     </ul>
                     <ul class="nav ">
-                        <li><button type="button" class="btn  login">Login</button>
+                        <li><button type="button" class="btn  login" data-toggle="modal" onclick="openLoginModal();">Login</button>
                         </li>
-                        <li><button type="button" class="btn  register">Sign up</button>
+                        <li><button type="button" class="btn  register" data-toggle="modal" onclick="openRegisterModal();">Sign up</button>
                         </li>
 
                     </ul>
@@ -76,10 +71,10 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark container-fluid py-2">
         <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center buttonsContainer">
             <button class="btn btnCont btn-primary rounded-pill px-3" id="africa" type="button">Africa</button>
-            <button class="btn btnCont btn-secondary rounded-pill px-3" id="america" type="button">America</button>
+            <button class="btn btnCont btn-warning rounded-pill px-3" id="america" type="button">America</button>
             <button class="btn btnCont btn-success rounded-pill px-3" id="asia" type="button">Asia</button>
             <button class="btn btnCont btn-danger rounded-pill px-3" id="europa" type="button">Europe</button>
-            <button class="btn btnCont btn-info rounded-pill px-3" id="oceania" type="button">Oceania</button>
+            <button class="btn btnCont btn-secondary rounded-pill px-3" id="oceania" type="button">Oceania</button>
             <button class="btn btnCont btn-light rounded-pill px-3" id="antartida" type="button">Antarctica</button>
         </div>
 
@@ -116,6 +111,7 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
         <script src="./js/colormode.js"></script>
+        <script src="./js/login-register.js"></script>
         <script src="./js/index.js"></script>
 
 </body>

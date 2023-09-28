@@ -48,7 +48,7 @@ const demonyms= pais.demonyms.eng.m;
 fillingAsideDetails(pais)
 
 const asideTitle = document.querySelector('.ListGroup');
-let aux = `<h2>${pais.name.common}</h2>`;
+let aux = `<h1 id='h1detalle'>${pais.name.common}</h1>`;
 asideTitle.innerHTML = aux;
 btnDreturn.addEventListener('click', (e) => {
     e.stopPropagation();

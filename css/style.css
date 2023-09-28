@@ -95,6 +95,9 @@ main {
     color: antiquewhite !important;
 
 }
+.dark-mode #h1detalle{
+    color: antiquewhite!important;
+}
 
 footer div {
     display: flex;
