@@ -22,37 +22,48 @@ a {
     text-decoration: none;
 }
 
-body.dark-mode{
+body.dark-mode {
     background-color: black;
     color: white;
 }
 
-body.light-mode{
+body.light-mode {
     background-color: white;
     color: black;
 }
+
 /* Estilos para el modo oscuro */
 .dark-mode a {
-    color: #ffffff; /* Cambia el color de los enlaces en modo oscuro */
+    color: #ffffff;
+    /* Cambia el color de los enlaces en modo oscuro */
 }
-.dark-mode h1{
-    color:cornsilk;
-    font-family:cursive;
+
+.dark-mode h1 {
+    color: cornsilk;
+    font-family: cursive;
 }
+
 /* Estilos para el modo claro */
 .light-mode a {
-    color: #000000; /* Cambia el color de los enlaces en modo claro */
+    color: #000000;
+    /* Cambia el color de los enlaces en modo claro */
 }
-.dark-mode .login, .dark-mode .about, .dark-mode .register {
-    color:antiquewhite;
-    font-family:cursive;
+
+.dark-mode .login,
+.dark-mode .about,
+.dark-mode .register {
+    color: antiquewhite;
+    font-family: cursive;
     border: solid 2px antiquewhite;
     font-weight: 500;
 
 }
-.light-mode .login, .light-mode .about, .light-mode .register {
-    color:lightslategray;
-    font-family:cursive;
+
+.light-mode .login,
+.light-mode .about,
+.light-mode .register {
+    color: lightslategray;
+    font-family: cursive;
     border: solid 2px lightslategray;
     font-weight: 500;
 
@@ -79,8 +90,9 @@ main {
     align-items: center;
     text-align: center;
 }
-.dark-mode footer{
-    color:antiquewhite!important;
+
+.dark-mode footer {
+    color: antiquewhite !important;
 
 }
 
@@ -102,14 +114,14 @@ footer div a {
 
 #contenedorBotonesUpDown {
     position: fixed;
-    bottom: 6rem;
+    top: 25rem;
     left: 1rem;
     z-index: 999;
     display: flex;
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
-    width: 4rem;
+    width: 2.5rem;
     height: fit-content;
 }
 
@@ -169,6 +181,30 @@ input {
     font-weight: 700;
 }
 
+#toggleButton {
+    width: 1.5rem;
+    height: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 12px;
+    background-image: url('../img/circle-half-stroke-solid.svg');
+    background-size: cover;
+    background-color: lightgray;
+    border: lightgrey 2px solid;
+}
+
+
+/* boton toggle dark-light*/
+#toggleButton {
+    font-size: larger;
+}
+
+
+
+#toggleButton {
+    z-index: 1500;
+}
+
 
 
 @media(width>900) {
@@ -206,47 +242,7 @@ input {
         align-items: center;
         justify-content: center;
     }
-}
 
-
-
-#toggleButton {
-    width: 3rem;
-    height: 3rem;
-    padding: 6px 0px;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.42857;
-    position: fixed;
-    top: 20rem;
-    right: 3rem;
-    background-image: url('../img/circle-half-stroke-solid.svg');
-    background-size: cover;
-    background-repeat: repeat;
-}
-
-
-/* boton toggle dark-light*/
-#toggleButton {
-    font-size: larger;
-}
-
-
-
-#toggleButton {
-    z-index: 1500;
-}
-
-
-@media(width <450px) {
-
-    #toggleButton {
-        display: none;
-    }
-}
-
-@media(width>900px) {
     #footer {
         display: flex;
         flex-direction: row !important;
@@ -255,7 +251,7 @@ input {
         width: 100%;
     }
 
-    F#footer div {
+    #footer div {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -263,4 +259,59 @@ input {
         width: 40%;
     }
 
+    html {
+        font-size: 18px;
+    }
+
+}
+
+@media(width<900) {
+
+    #contenedorBotonesUpDown {
+        display: none!important;
+    }
+
+
+}
+
+@media(width<768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .tituloh1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tituloh11 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tituloh111 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+}
+
+@media(width <450px) {
+
+    html {
+        font-size: 14px;
+    }
+}
+
+@media(width <350px) {
+    html {
+        font-size: 12px;
+    }
 }

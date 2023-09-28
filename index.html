@@ -16,18 +16,13 @@
 </head>
 
 <body class="container-fluid d-flex flex-wrap ">
- 
+
 
     <!--   SCROLL UP & DOWN-->
     <div id="contenedorBotonesUpDown">
+            <button class="btn btn-outline-secondary btnUp " id="botonesUP"><i class="fa-solid fa-arrow-up"></i></button>
+            <button class="btn btn-outline-secondary  btnDown" id="botonesDown"><i class="fa-solid fa-arrow-down"></i></button>
 
-        <div class="botonesUP" id="botonesUP">
-            <button class="btn btn-outline-secondary btnUp" id="up"><i class="fa-solid fa-arrow-up"></i></button>
-        </div>
-
-        <div class="botonesDown" id="botonesDown">
-            <button class="btn btn-outline-secondary btnDown" id="down"><i class="fa-solid fa-arrow-down"></i></button>
-        </div>
     </div>
 
 
@@ -43,31 +38,33 @@
     <!--  END MODALS-->
 
     <div class="container-fluid  iamgenF">
-        <header class="py-2  border-bottom ">
-            <nav class="py-2  border-bottom primernav">
-                <div class="container d-flex flex-wrap">
-                    <ul class="nav me-auto">
+        <header class="py-2 header1  border-bottom ">
+            <nav class="py-2 tituloh1 border-bottom primernav">
+                <div class="container tituloh11 d-flex flex-wrap">
+                    <ul class="nav me-auto  ">
 
                         <li><button type="button" class="btn  about">About</button>
-                        </ul>
-                    <ul class="nav">
+                    </ul>
+                    <ul class="nav ">
                         <li><button type="button" class="btn  login">Login</button>
                         </li>
                         <li><button type="button" class="btn  register">Sign up</button>
                         </li>
-                       
+
                     </ul>
                 </div>
             </nav>
         </header>
-        <header class="py-3 mb-4 border-bottom">
-            <nav class="navbar navbar-expand-lg  rounded" aria-label="Eleventh navbar example">
-                <div class="container-fluid">
+        <header class="py-3 header2 mb-4  tituloh1 border-bottom">
+            <nav class="navbar navbar-expand-lg  tituloh1 rounded" aria-label="Eleventh navbar example">
+                <div class="container-fluid tituloh1">
                     <h1> Fun With Flags(bis)</h1>
 
-                    <form role="search">
-                        <input class="form-control" id="barraSearch" type="search" placeholder="Search"
+                    <form role="search" class="d-flex flex-row justify-content-between align-items-center ">
+                        <input class="form-control me-3" id="barraSearch" type="search" placeholder="Search"
                             aria-label="Search">
+                            <button id="toggleButton" class="btn-outline-secondary rounded-circle"></button>
+
                     </form>
                 </div>
             </nav>
@@ -99,31 +96,27 @@
     <footer id="footer" class="container-fluid ">
         <div class="author">
 
-            <p >© 2023 GBD, Leo & Gyfu</p>
+            <p>© 2023 GBD, Leo & Gyfu</p>
         </div>
 
         <div class="socialmedia ">
-            <span> <a  href="https://twiter.com" target="_blank" rel="noopener noreferrer">
+            <span> <a href="https://twiter.com" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-x-twitter"></i> </a></span>
-            <span> <a  href="https://www.instagram.com" target="_blank"
-                    rel="noopener noreferrer"> <i class="fa-brands fa-instagram"></i> </a></span>
-            <span> <a  href="https://www.facebook.com/home.php" target="_blank"
-                    rel="noopener noreferrer"> <i class="fa-brands fa-facebook"></i> </a></span>
+            <span> <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"> <i
+                        class="fa-brands fa-instagram"></i> </a></span>
+            <span> <a href="https://www.facebook.com/home.php" target="_blank" rel="noopener noreferrer"> <i
+                        class="fa-brands fa-facebook"></i> </a></span>
         </div>
     </footer>
-   
-        <!--esta pagina cambia de color segun las preferencias del sistema o tuyas-->
-        <button id="toggleButton"></button>
-    <
 
-    <!-------------------------------------------------------------------------------------------->
+    < <!-------------------------------------------------------------------------------------------->
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-<script src="./js/colormode.js"></script>
-    <script src="./js/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="./js/colormode.js"></script>
+        <script src="./js/index.js"></script>
 
 </body>
 
