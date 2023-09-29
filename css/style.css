@@ -79,7 +79,8 @@ ul {
 
 main {
     padding: 32px;
-    margin: 16px;
+    margin: 16px; 
+    min-height: 70vh;
 }
 
 #footer {
@@ -175,6 +176,7 @@ footer div a {
     position:absolute;
     bottom:1rem;
     right:1rem;
+    color:bisque;
 }
 /**detgalle */
 .imagenDetalle1 {
