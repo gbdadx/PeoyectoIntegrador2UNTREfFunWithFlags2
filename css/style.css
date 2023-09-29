@@ -176,7 +176,7 @@ footer div a {
     position:absolute;
     bottom:1rem;
     right:1rem;
-    color:bisque;
+    color: bisque !important;
 }
 /**detgalle */
 .imagenDetalle1 {
