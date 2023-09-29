@@ -116,15 +116,12 @@ footer div a {
 
 
 #contenedorBotonesUpDown {
-    position: fixed;
-    top: 400px;
-    left: 16px;
     z-index: 999;
     display: flex;
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
-    width: 40px;
+    width: 2.5rem;
     height: fit-content;
 }
 
@@ -309,14 +306,7 @@ input {
 
 }
 
-@media(width<900) {
 
-    #contenedorBotonesUpDown {
-        display: none!important;
-    }
-
-
-}
 
 @media(width<48rem) {
     html {

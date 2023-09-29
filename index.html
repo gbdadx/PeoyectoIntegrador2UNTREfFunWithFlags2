@@ -15,17 +15,16 @@
 
 </head>
 
-<body class="container-fluid d-flex flex-wrap ">
+<body class="container-fluid d-flex flex-wrap position-relative">
 
 
     <!--   SCROLL UP & DOWN-->
-    <div id="contenedorBotonesUpDown">
+    <div id="contenedorBotonesUpDown" class="d-none d-lg-block position-fixed top-50 start-1" >
         <button class="btn btn-outline-secondary btnUp " id="botonesUP"><i class="fa-solid fa-arrow-up"></i></button>
         <button class="btn btn-outline-secondary  btnDown" id="botonesDown"><i
                 class="fa-solid fa-arrow-down"></i></button>
 
     </div>
-
     <!-- modals
 
 
@@ -53,7 +52,7 @@
 
 
                         </div>
-                        <button type="submit" class="btn btnHomeBanking loginBtn" style="width: fit-content;"
+                        <button type="close" class="btn btnHomeBanking loginBtn" style="width: fit-content;"
                             data-bs-dismiss="modal">Submit</button>
                     </form>
 
@@ -84,7 +83,7 @@
                             <label for="pwd2" class="pb-1" style="color:white">Repeat password</label>
                             <input type="password" class="form-control" id="pwd2" placeholder="Contraseña" name="pswd">
                         </div>
-                        <button type="submit" class="btn btnHomeBanking registerBtn" style="width: fit-content;"
+                        <button type="close" class="btn btnHomeBanking registerBtn" style="width: fit-content;"
                             data-bs-dismiss="modal">Submit</button>
                     </form>
 
@@ -179,6 +178,8 @@
     </nav>
 
     </div>
+  
+
     <main class="container-fluid">
         <div class="container contenedor">
             <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
