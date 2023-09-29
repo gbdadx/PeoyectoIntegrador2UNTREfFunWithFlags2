@@ -1,53 +1,51 @@
 # FunWithFlags2
 
 
-Fun With Flags is a web application developed as part of the Front End course at UNTREF, Argentina Programa 4.0. It's a fun and interactive way to explore information about countries around the world using the RestCountries API. This project was created by GBD, Leo, and Gyfu in 2023.
+# Fun with Flags
 
-Features
-Country Cards: View detailed information about different countries, including their flags, official names, common names, and continents.
+![Fun with Flags Logo](./img/logo.png)
 
-Search Functionality: Easily search for countries by name, both common and official, and get instant results.
+Fun with Flags is a web application that allows you to explore countries and their flags. It's a fun and educational tool to learn more about the world.
 
-Continental Navigation: Explore countries by continent with the click of a button.
+## Features
 
-Dark and Light Mode: Toggle between dark and light mode for a personalized user experience.
+- Browse and search for countries.
+- View country details, including their flags, capitals, and more.
+- Explore countries by continent.
+- Dark and light mode support.
 
-User Registration: Sign up for an account to access additional features (under development).
+## Technologies Used
 
-How to Use
-Visit the Fun With Flags website (https://gbdadx.github.io/FunWithFlags2/index.html).
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Font Awesome
+- REST Countries API
 
-Explore countries by scrolling through the interactive cards.
+## Getting Started
 
-Use the search bar to find specific countries.
+To run this project locally, follow these steps:
 
-Navigate by continent using the continent buttons.
+1. Clone this repository:
 
-Enjoy a visually appealing experience in either dark or light mode.
+2. Open the project folder in your code editor.
+3. Open `index.html` in your web browser to start using the application.
 
-Contributing
-We welcome contributions from the open-source community. If you'd like to contribute to this project, please follow these steps:
+## Contributing
 
-Fork the repository.
+If you'd like to contribute to this project, please fork the repository and create a pull request. We welcome your contributions!
 
-Create a new branch for your feature or bug fix.
+## License
 
-Make your changes and commit them with descriptive messages.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-Push your branch to your forked repository.
+## Contact
 
-Create a pull request to merge your changes into the main project.
+For any questions or feedback, please contact us at [your-email@example.com](mailto:your-email@example.com).
 
-Feedback
-We value your feedback and suggestions. If you encounter any issues, have ideas for improvements, or want to report a bug, please open an issue in this repository.
+## Acknowledgments
 
-About Us
-This project was developed by GBD as part of a Front End course at UNTREF, Argentina Programa 4.0. We are passionate about web development and are excited to share this project with the community.
+We would like to thank the [REST Countries API](https://restcountries.com/) for providing the country data used in this project.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
-
-
-
+Enjoy exploring the world with Fun with Flags!

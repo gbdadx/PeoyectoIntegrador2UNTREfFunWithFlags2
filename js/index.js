@@ -3,12 +3,12 @@
 let enlace = 'https://restcountries.com/v3.1/all';
 //let enlace = './countries.json';
 
-  fetch(enlace)
-    .then(response => response.json())
-    .then(data =>{
-		localStorage.setItem("objeto", JSON.stringify(data));
-	})
-	.catch(error => console.error('Error:', error));
+fetch(enlace)
+  .then(response => response.json())
+  .then(data => {
+    localStorage.setItem("objeto", JSON.stringify(data));
+  })
+  .catch(error => console.error('Error:', error));
 
 
 /**
@@ -35,7 +35,7 @@ if (!data) {
       return nombreA.localeCompare(nombreB);
     });
 
-    contenedor.innerHTML = ''; 
+    contenedor.innerHTML = '';
 
     paises.forEach((pais, index) => {
       const nombreComun = pais.name.common || '';
@@ -183,39 +183,41 @@ window.addEventListener('mouseup', detenerScroll);
 
 /***  SIGN IN    SIGN UP    CONTACT MODALS */
 //sign up
-const registerBtn = document.querySelector(".registerBtn");
+const registerBtn= document.querySelector(".registerBtn");
+registerBtn.addEventListener('click', function() {
+  const password1 = document.querySelector('#pwd2');
+  const password2 = document.querySelector('#pwd3');
+  const errorPass = document.querySelector('.errorPassw');
+  const errorEm = document.querySelector('#errorEm');
+  const emailInput = document.querySelector('#uname');
 
-registerBtn.addEventListener("click", (e) => {
-    const userData = {
-        email: '',
-        password: '', 
-      
-    };
-    let errores = [];
+  const emailValue = emailInput.value;
 
-    // 1. Obtenemos el valor ingresado en el input de email
-    const emailQ = document.querySelector('#uname');
-    userData.email = emailQ.value;
+let isValid = true; // Variable para realizar un seguimiento de la validación
+let isValidEmail = true;
 
-    // 2. Obtenemos los datos ingresados en el input de password
-    const passwordQ = document.querySelector('#pwd'); 
-    userData.password = passwordQ.value; 
+const emailPattern = /^[a-zA-Z0-9._-]{6,}@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}){1,}$/;
+  if (!emailPattern.test(emailValue)) {
+    errorEm.innerHTML = `<p class="text m-2">El correo electrónico no es válido.</p>`;
+    isValidEmail = false;
+  }
+  const password1Value = password1.value;
+  const password2Value = password2.value;
 
-    // 7. Si todo está correcto, mostramos por consola un objeto con la información
-    // ingresada por el usuario.
-    
+  errorPass.textContent = ""; // Limpia el mensaje de error antes de realizar la validación
 
-       
-        let aux = ''
-        for (let key in userData) {
+  if (password1Value.length < 8 || password1Value.length > 12) {
+    errorPass.textContent = "La contraseña debe tener entre 8 y 12 caracteres.";
+    isValid = false; // Establecer isValid en falso si hay un error
+  } else if (password1Value !== password2Value) {
+    errorPass.textContent = "Las contraseñas no coinciden.";
+    isValid = false; // Establecer isValid en falso si hay un error
+  }
 
-            datosUsuario.innerHTML += `<p>${key}: ${userData[key]}</p>`;
-            aux += '*' + key + ' : ' + userData[key] + '\n';
-            
-        }
-        console.log(aux);
-
-        alert(aux);
-    
+  if (isValid && isValidEmail) {
+    // Si las contraseñas son válidas, agrega el atributo data-bs-dismiss al botón
+    registerBtn.setAttribute('type','submit');
+    registerBtn.setAttribute('data-bs-dismiss', 'modal');
+  }
+  
 });
-
