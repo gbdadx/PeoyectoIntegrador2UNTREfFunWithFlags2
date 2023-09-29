@@ -207,10 +207,10 @@ const emailPattern = /^[a-zA-Z0-9._-]{6,}@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}){1,}$/;
   errorPass.textContent = ""; // Limpia el mensaje de error antes de realizar la validación
 
   if (password1Value.length < 8 || password1Value.length > 12) {
-    errorPass.textContent = "La contraseña debe tener entre 8 y 12 caracteres.";
+    errorPass.textContent = "The password must be between 8 and 12 characters.";
     isValid = false; // Establecer isValid en falso si hay un error
   } else if (password1Value !== password2Value) {
-    errorPass.textContent = "Las contraseñas no coinciden.";
+    errorPass.textContent = "Passwords do not match.";
     isValid = false; // Establecer isValid en falso si hay un error
   }
 
