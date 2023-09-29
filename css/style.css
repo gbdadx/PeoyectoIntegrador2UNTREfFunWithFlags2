@@ -46,7 +46,7 @@ body.light-mode {
 /* Estilos para el modo claro */
 .light-mode a {
     color: #000000;
-    /* Cambia el color de los enlaces en modo claro */
+   
 }
 
 .dark-mode .login,
@@ -54,7 +54,7 @@ body.light-mode {
 .dark-mode .register {
     color: antiquewhite;
     font-family: cursive;
-    border: solid 2px antiquewhite;
+    border: solid .125rem antiquewhite;
     font-weight: 500;
 
 }
@@ -63,14 +63,13 @@ body.light-mode {
 .light-mode .about,
 .light-mode .register {
     color: lightslategray;
-    font-family: cursive;
-    border: solid 2px lightslategray;
+    border: solid .125rem lightslategray;
     font-weight: 500;
 
 }
 
 .login {
-    margin-right: 2rem;
+    margin-right: 32px;
 }
 
 ul {
@@ -79,8 +78,8 @@ ul {
 
 
 main {
-    padding: 2rem;
-    margin: 1rem;
+    padding: 32px;
+    margin: 16px;
 }
 
 #footer {
@@ -105,26 +104,26 @@ footer div {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 1rem;
+    padding: 16px;
 
 }
 
 footer div a {
     text-decoration: none;
-    padding: 2rem;
+    padding: 32px;
 }
 
 
 #contenedorBotonesUpDown {
     position: fixed;
-    top: 25rem;
-    left: 1rem;
+    top: 400px;
+    left: 16px;
     z-index: 999;
     display: flex;
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
-    width: 2.5rem;
+    width: 40px;
     height: fit-content;
 }
 
@@ -135,18 +134,18 @@ footer div a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 4rem;
-    height: 4rem;
-    padding: 0.5rem;
+    width: 64px;
+    height: 64px;
+    padding: 8px;
 
 }
 
 .btnDown {
-    border-radius: 0px 0px 16px 16px;
+    border-radius: 0rem 0rem 1rem 1rem;
 }
 
 .btnUp {
-    border-radius: 16px 16px 0px 0px;
+    border-radius: 1rem 1rem 0rem 0rem;
 }
 
 
@@ -156,9 +155,27 @@ footer div a {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    gap:1rem;
     z-index: 0;
 }
 
+.card{
+    width:17rem;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+}
+.card img{
+    height:11rem;
+}
+.btnCard{
+    position:absolute;
+    bottom:1rem;
+    right:1rem;
+}
 /**detgalle */
 .imagenDetalle1 {
     width: 70%;
@@ -173,8 +190,8 @@ footer div a {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
-    margin: 1rem;
-    gap: 1rem;
+    margin: 16px;
+    gap: 16px;
 
 
 }
@@ -185,15 +202,15 @@ input {
 }
 
 #toggleButton {
-    width: 1.5rem;
-    height: 1rem;
-    padding: 1rem;
+    width: 24px;
+    height: 16px;
+    padding: 16px;
     text-align: center;
-    font-size: 12px;
+    font-size: .75rem;
     background-image: url('../img/circle-half-stroke-solid.svg');
     background-size: cover;
     background-color: lightgray;
-    border: lightgrey 2px solid;
+    border: lightgrey .125rem solid;
 }
 
 
@@ -219,10 +236,10 @@ input {
 .modal-content,
 .modal-body {
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3.3px);
-    border: 0px;
+    border-radius: 1rem;
+    box-shadow: 0 .25rem 1.875rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(.2062rem);
+    border: 0rem;
 }
 
 .modal-body h4,
@@ -285,7 +302,7 @@ input {
     }
 
     html {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
 }
@@ -299,9 +316,9 @@ input {
 
 }
 
-@media(width<768px) {
+@media(width<48rem) {
     html {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .tituloh1 {
@@ -328,15 +345,15 @@ input {
 
 }
 
-@media(width <450px) {
+@media(width <28.125rem) {
 
     html {
-        font-size: 14px;
+        font-size: .875rem;
     }
 }
 
-@media(width <350px) {
+@media(width <21.875rem) {
     html {
-        font-size: 12px;
+        font-size: .75rem;
     }
 }

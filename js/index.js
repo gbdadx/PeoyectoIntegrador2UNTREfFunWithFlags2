@@ -182,5 +182,40 @@ window.addEventListener('mouseup', detenerScroll);
 
 
 /***  SIGN IN    SIGN UP    CONTACT MODALS */
+//sign up
+const registerBtn = document.querySelector(".registerBtn");
 
+registerBtn.addEventListener("click", (e) => {
+    const userData = {
+        email: '',
+        password: '', 
+      
+    };
+    let errores = [];
+
+    // 1. Obtenemos el valor ingresado en el input de email
+    const emailQ = document.querySelector('#uname');
+    userData.email = emailQ.value;
+
+    // 2. Obtenemos los datos ingresados en el input de password
+    const passwordQ = document.querySelector('#pwd'); 
+    userData.password = passwordQ.value; 
+
+    // 7. Si todo está correcto, mostramos por consola un objeto con la información
+    // ingresada por el usuario.
+    
+
+       
+        let aux = ''
+        for (let key in userData) {
+
+            datosUsuario.innerHTML += `<p>${key}: ${userData[key]}</p>`;
+            aux += '*' + key + ' : ' + userData[key] + '\n';
+            
+        }
+        console.log(aux);
+
+        alert(aux);
+    
+});
 
