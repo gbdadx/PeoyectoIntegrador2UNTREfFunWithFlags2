@@ -198,7 +198,7 @@ let isValidEmail = true;
 
 const emailPattern = /^[a-zA-Z0-9._-]{6,}@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}){1,}$/;
   if (!emailPattern.test(emailValue)) {
-    errorEm.innerHTML = `<p class="text m-2">El correo electrónico no es válido.</p>`;
+    errorEm.innerHTML = `<p class="text m-2">Invalid email.</p>`;
     isValidEmail = false;
   }
   const password1Value = password1.value;
@@ -221,3 +221,38 @@ const emailPattern = /^[a-zA-Z0-9._-]{6,}@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}){1,}$/;
   }
   
 });
+/** login */
+const loginBtn= document.querySelector(".loginBtn");
+loginBtn.addEventListener('click', function() {
+  const password2 = document.querySelector('#pwd0');
+  const errorPass = document.querySelector('#errorPassw0');
+  const errorEm = document.querySelector('#errorEm0');
+  const emailInput = document.querySelector('#uname0');
+
+  const emailValue = emailInput.value;
+
+let isValid = true; // Variable para realizar un seguimiento de la validación
+let isValidEmail = true;
+
+const emailPattern = /^[a-zA-Z0-9._-]{6,}@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}){1,}$/;
+  if (!emailPattern.test(emailValue) || emailValue=='')  {
+    errorEm.innerHTML = `<p class="text m-2">Invalid mail.</p>`;
+    isValidEmail = false;
+  }
+  const password2Value = password2.value;
+
+  errorPass.textContent = ""; // Limpia el mensaje de error antes de realizar la validación
+
+  if (password2Value.length < 8 || password2Value.length > 12) {
+    errorPass.textContent = "The password must be between 8 and 12 characters.";
+    isValid = false; // Establecer isValid en falso si hay un error
+  } 
+
+  if (isValid && isValidEmail) {
+    // Si las contraseñas son válidas, agrega el atributo data-bs-dismiss al botón
+    loginBtn.setAttribute('type','submit');
+    loginBtn.setAttribute('data-bs-dismiss', 'modal');
+  }
+  
+});
+

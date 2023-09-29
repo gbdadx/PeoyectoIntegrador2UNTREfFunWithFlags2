@@ -33,73 +33,8 @@
 
     <!-- The Modal(alert) -->
     <!--login about and signup inside modal-->
-    <!--sign in-->
-    <div class="modal fade" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
 
-                <div class="modal-body">
-                    <h4>Sign in</h4>
-
-                    <form action="#">
-                        <div class="py-1  mb-3">
-                            <label for="uname0" class="pb-1" style="color:white">Email</label>
-                            <input type="email" class="form-control" id="uname0" placeholder="E-mail" name="uname"
-                                autocomplete="off" required>
-
-
-                        </div>
-                        <div class="py-1  mb-3">
-                            <label for="pwd0" class="pb-1" style="color:white">Password</label>
-                            <input type="password" class="form-control" id="pwd0" placeholder="Contraseña" name="pswd"
-                                required>
-
-
-                        </div>
-                        <button type="button" class="btn btnHomeBanking loginBtn" style="width: fit-content;"
-                            data-bs-dismiss="modal">Submit</button>
-                    </form>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- sign up-->
-    <div class="modal fade" id="myModal2">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h4>Sign up</h4>
-
-                    <form action="https://formspree.io/f/xpzgoqrb" method="POST">
-                        <div class="py-1  mb-3">
-                            <label for="uname" class="pb-1" style="color:white">Email</label>
-                            <input type="email" class="form-control" id="uname" placeholder="E-mail" name="uname"
-                                autocomplete="off" required>
-                            <div id="errorEm"></div>
-
-                        </div>
-                        <div class="py-1  mb-3">
-                            <label for="pwd3" class="pb-1" style="color:white">Password</label>
-                            <input type="password" class="form-control" id="pwd3" placeholder="Contraseña" name="pswd"
-                                required>
-                            <br>
-                            <label for="pwd2" class="pb-1" style="color:white">Repeat password</label>
-                            <input type="password" class="form-control" id="pwd2" placeholder="Contraseña" name="pswd"
-                                required>
-                        </div>
-                        <div class="errorPassw"></div>
-                        <button type="button" class="btn btnHomeBanking registerBtn"
-                            style="width: fit-content;">Submit</button>
-                    </form>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+    
     <!--about -->
     <div class="modal fade" id="myModal3">
         <div class="modal-dialog">
@@ -128,6 +63,75 @@
         </div>
     </div>
     <!-- about ends -->
+    <!--sign in-->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <h4>Sign in</h4>
+
+                    <form action="#">
+                        <div class="py-1  mb-3">
+                            <label for="uname0" class="pb-1" style="color:white">Email</label>
+                            <input type="email" class="form-control" id="uname0" placeholder="E-mail" name="uname"
+                              required>
+                              <div id="errorEm0"></div>
+
+                        </div>
+                        <div class="py-1  mb-3">
+                            <label for="pwd0" class="pb-1" style="color:white">Password</label>
+                            <input type="password" class="form-control" id="pwd0" placeholder="Password" name="pswd"
+                                required>
+
+
+                        </div>
+                        <div id="errorPassw0"></div>
+
+                        <button type="button" class="btn btnHomeBanking loginBtn" style="width: fit-content;"
+                            >Submit</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- sign up-->
+    <div class="modal fade" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4>Sign up</h4>
+
+                    <form action="https://formspree.io/f/xpzgoqrb" method="POST">
+                        <div class="py-1  mb-3">
+                            <label for="uname" class="pb-1" style="color:white">Email</label>
+                            <input type="email" class="form-control" id="uname" placeholder="E-mail" name="uname"
+                                autocomplete="off" required>
+                            <div id="errorEm"></div>
+
+                        </div>
+                        <div class="py-1  mb-3">
+                            <label for="pwd3" class="pb-1" style="color:white">Password</label>
+                            <input type="password" class="form-control" id="pwd3" placeholder="Password" name="pswd"
+                                required>
+                            <br>
+                            <label for="pwd2" class="pb-1" style="color:white">Repeat password</label>
+                            <input type="password" class="form-control" id="pwd2" placeholder="Password" name="pswd"
+                                required>
+                        </div>
+                        <div class="errorPassw"></div>
+                        <button type="button" class="btn btnHomeBanking registerBtn"
+                            style="width: fit-content;">Submit</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
     <!-- modal ends-->
 
