@@ -20,17 +20,112 @@
 
     <!--   SCROLL UP & DOWN-->
     <div id="contenedorBotonesUpDown">
-            <button class="btn btn-outline-secondary btnUp " id="botonesUP"><i class="fa-solid fa-arrow-up"></i></button>
-            <button class="btn btn-outline-secondary  btnDown" id="botonesDown"><i class="fa-solid fa-arrow-down"></i></button>
+        <button class="btn btn-outline-secondary btnUp " id="botonesUP"><i class="fa-solid fa-arrow-up"></i></button>
+        <button class="btn btn-outline-secondary  btnDown" id="botonesDown"><i
+                class="fa-solid fa-arrow-down"></i></button>
 
     </div>
 
-
-    <!--   SIGN IN SING UP CONTACT-->
-
+    <!-- modals
 
 
-    <!--  END MODALS-->
+ <!-- The Modal(alert) ; al hacer click en los botones del nav, se despliega una ventana de modal-alert, que tiene el login (solo bootstrap)-->
+    <!--pusimos el login dentro de un modal-->
+    <!--sign in-->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <h4>Sign in</h4>
+
+                    <form action="#">
+                        <div class="py-1  mb-3">
+                            <label for="uname" class="pb-1" style="color:white">Email</label>
+                            <input type="email" class="form-control" id="uname" placeholder="E-mail" name="uname"
+                                autocomplete="off">
+
+
+                        </div>
+                        <div class="py-1  mb-3">
+                            <label for="pwd" class="pb-1" style="color:white">Password</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="pswd">
+
+
+                        </div>
+                        <button type="submit" class="btn btnHomeBanking" style="width: fit-content;"
+                            data-bs-dismiss="modal">Submit</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- sign up-->
+    <div class="modal fade" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4>Sign up</h4>
+
+                    <form action="#">
+                        <div class="py-1  mb-3">
+                            <label for="uname" class="pb-1" style="color:white">Email</label>
+                            <input type="email" class="form-control" id="uname" placeholder="E-mail" name="uname"
+                                autocomplete="off">
+
+
+                        </div>
+                        <div class="py-1  mb-3">
+                            <label for="pwd" class="pb-1" style="color:white">Password</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="pswd">
+                            <br>
+                            <label for="pwd" class="pb-1" style="color:white">Repeat password</label>
+                            <input type="password" class="form-control" id="pwd2" placeholder="Contraseña" name="pswd">
+                        </div>
+                        <button type="submit" class="btn btnHomeBanking" style="width: fit-content;"
+                            data-bs-dismiss="modal">Submit</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--about -->
+    <div class="modal fade" id="myModal3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+
+
+                <div class="modal-body">
+                    <h4>About</h4>
+
+                    <div class="container">
+
+                        <div class="py-1  mb-3">
+                            <p>My proyect for UNTREF, Front End course 2nd part (Argentina Programa 4.0), using
+                                RestCountries api</p>
+                        </div>
+                        <button type="close" class="btn btnHomeBanking " style="width: fit-content;"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- about ends -->
+
+    <!-- modal ends-->
+
+
+
+
 
     <div class="container-fluid  iamgenF">
         <header class="py-2 header1  border-bottom ">
@@ -38,12 +133,15 @@
                 <div class="container tituloh11 d-flex flex-wrap">
                     <ul class="nav me-auto  ">
 
-                        <li><button type="button" class="btn  about">About</button>
+                        <li><button type="button" class="btn  about" data-bs-toggle="modal"
+                                data-bs-target="#myModal3">About</button>
                     </ul>
                     <ul class="nav ">
-                        <li><button type="button" class="btn  login" data-toggle="modal" onclick="openLoginModal();">Login</button>
+                        <li><button type="button" class="btn  login" data-bs-toggle="modal"
+                                data-bs-target="#myModal">Login</button>
                         </li>
-                        <li><button type="button" class="btn  register" data-toggle="modal" onclick="openRegisterModal();">Sign up</button>
+                        <li><button type="button" class="btn  register" data-bs-toggle="modal"
+                                data-bs-target="#myModal2">Sign up</button>
                         </li>
 
                     </ul>
@@ -58,7 +156,7 @@
                     <form role="search" class="d-flex flex-row justify-content-between align-items-center ">
                         <input class="form-control me-3" id="barraSearch" type="search" placeholder="Search"
                             aria-label="Search">
-                            <button id="toggleButton" class="btn-outline-secondary rounded-circle"></button>
+                        <button id="toggleButton" class="btn-outline-secondary rounded-circle"></button>
 
                     </form>
                 </div>

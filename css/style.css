@@ -208,7 +208,29 @@ input {
     z-index: 1500;
 }
 
+/**modals */
+.modal{
+    z-index: 2000;
+}
 
+#myModal,
+#myModal1,
+.modal-dialog,
+.modal-content,
+.modal-body {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.3px);
+    border: 0px;
+}
+
+.modal-body h4,
+.modal-body h6, .btnHomeBanking {
+    color: white;
+}
+
+/*fin modals */
 
 @media(width>900) {
     .main2 {
