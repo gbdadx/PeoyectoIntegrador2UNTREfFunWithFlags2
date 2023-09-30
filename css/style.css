@@ -46,7 +46,7 @@ body.light-mode {
 /* Estilos para el modo claro */
 .light-mode a {
     color: #000000;
-   
+
 }
 
 .dark-mode .login,
@@ -79,10 +79,12 @@ ul {
 
 main {
     padding: 32px;
-    margin: 16px; 
+    margin: 16px;
     min-height: 70vh;
 }
 
+
+/* inicio footer */
 #footer {
     display: flex;
     flex-direction: column;
@@ -95,9 +97,7 @@ main {
     color: antiquewhite !important;
 
 }
-.dark-mode #h1detalle{
-    color: antiquewhite!important;
-}
+
 
 footer div {
     display: flex;
@@ -114,7 +114,9 @@ footer div a {
     padding: 32px;
 }
 
+/* fin footer */
 
+/*scroll */
 #contenedorBotonesUpDown {
     z-index: 999;
     display: flex;
@@ -147,18 +149,18 @@ footer div a {
 }
 
 
-
+/*cards */
 .contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap:1rem;
+    gap: 1rem;
     z-index: 0;
 }
 
-.card{
-    width:17rem;
+.card {
+    width: 17rem;
     height: 23rem;
     display: flex;
     flex-direction: column;
@@ -166,16 +168,73 @@ footer div a {
     justify-content: space-evenly;
 
 }
-.card img{
-    height:11rem;
+
+.card img {
+    height: 11rem;
 }
-.btnCard{
-    position:absolute;
-    bottom:1rem;
-    right:1rem;
+
+.btnCard {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
     color: bisque !important;
 }
+
+
+input {
+    color: black;
+    font-weight: 700;
+    margin-right: 3rem;
+}
+
+/* boton toggle dark-light*/
+
+#toggleButton {
+    width: 24px;
+
+    height: 16px;
+    padding: 16px;
+    text-align: center;
+    font-size: .75rem;
+    font-size: larger;
+
+    background-image: url('../img/circle-half-stroke-solid.svg');
+    background-size: cover;
+    background-color: lightgray;
+    border: lightgrey .125rem solid;
+    z-index: 1500;
+}
+
+/**modals */
+.modal {
+    z-index: 2000;
+}
+
+#myModal,
+#myModal1,
+.modal-dialog,
+.modal-content,
+.modal-body {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 .25rem 1.875rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(.2062rem);
+    border: 0rem;
+}
+
+.modal-body h4,
+.modal-body h6,
+.btnHomeBanking {
+    color: white;
+}
+
+/*fin modals */
+
 /**detgalle */
+
+.dark-mode #h1detalle {
+    color: antiquewhite !important;
+}
 .imagenDetalle1 {
     width: 70%;
 }
@@ -194,59 +253,6 @@ footer div a {
 
 
 }
-
-input {
-    color: black;
-    font-weight: 700;
-}
-
-#toggleButton {
-    width: 24px;
-    height: 16px;
-    padding: 16px;
-    text-align: center;
-    font-size: .75rem;
-    background-image: url('../img/circle-half-stroke-solid.svg');
-    background-size: cover;
-    background-color: lightgray;
-    border: lightgrey .125rem solid;
-}
-
-
-/* boton toggle dark-light*/
-#toggleButton {
-    font-size: larger;
-}
-
-
-
-#toggleButton {
-    z-index: 1500;
-}
-
-/**modals */
-.modal{
-    z-index: 2000;
-}
-
-#myModal,
-#myModal1,
-.modal-dialog,
-.modal-content,
-.modal-body {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    box-shadow: 0 .25rem 1.875rem rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(.2062rem);
-    border: 0rem;
-}
-
-.modal-body h4,
-.modal-body h6, .btnHomeBanking {
-    color: white;
-}
-
-/*fin modals */
 
 @media(width>900) {
     .main2 {
@@ -308,7 +314,7 @@ input {
 
 
 
-@media(width<48rem) {
+@media(width<830px) {
     html {
         font-size: 1rem;
     }
@@ -337,15 +343,18 @@ input {
 
 }
 
-@media(width <28.125rem) {
+@media(width <450px) {
 
     html {
         font-size: .875rem;
     }
 }
 
-@media(width <21.875rem) {
+@media(width <350px) {
     html {
         font-size: .75rem;
+    }
+.fa-globe{
+        display:none;
     }
 }
