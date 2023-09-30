@@ -1,7 +1,8 @@
 /*funciona usando el fetch contra el json o contra la api */
 
-let enlace = 'https://restcountries.com/v3.1/all';
+//let enlace = 'https://restcountries.com/v3.1/all';
 //let enlace = './countries.json';
+let enlace = 'https://restcountries.com/v3.1/independent?status=true';
 
 fetch(enlace)
   .then(response => response.json())
@@ -22,8 +23,7 @@ const data = JSON.parse(localStorage.getItem('objeto'));
 if (!data) {
   console.log('No se pudo obtener el objeto del localStorage');
 } else {
-  let vara= data.filter((e)=> e.name.common!=='Falkland Islands')
-const objeto = vara;
+  const objeto = data;
 
   // Función para agregar tarjetas al contenedor
   function agregarTarjetas(paises) {
@@ -184,8 +184,8 @@ window.addEventListener('mouseup', detenerScroll);
 
 /***  SIGN IN    SIGN UP    CONTACT MODALS */
 //sign up
-const registerBtn= document.querySelector(".registerBtn");
-registerBtn.addEventListener('click', function() {
+const registerBtn = document.querySelector(".registerBtn");
+registerBtn.addEventListener('click', function () {
   const password1 = document.querySelector('#pwd2');
   const password2 = document.querySelector('#pwd3');
   const errorPass = document.querySelector('.errorPassw');
@@ -194,10 +194,10 @@ registerBtn.addEventListener('click', function() {
 
   const emailValue = emailInput.value;
 
-let isValid = true; // Variable para realizar un seguimiento de la validación
-let isValidEmail = true;
+  let isValid = true; // Variable para realizar un seguimiento de la validación
+  let isValidEmail = true;
 
-const emailPattern = /^[a-zA-Z0-9._-]{6,}@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}){1,}$/;
+  const emailPattern = /^[a-zA-Z0-9._-]{6,}@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}){1,}$/;
   if (!emailPattern.test(emailValue)) {
     errorEm.innerHTML = `<p class="text m-2">Invalid email.</p>`;
     isValidEmail = false;
@@ -217,14 +217,14 @@ const emailPattern = /^[a-zA-Z0-9._-]{6,}@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}){1,}$/;
 
   if (isValid && isValidEmail) {
     // Si las contraseñas son válidas, agrega el atributo data-bs-dismiss al botón
-    registerBtn.setAttribute('type','submit');
+    registerBtn.setAttribute('type', 'submit');
     registerBtn.setAttribute('data-bs-dismiss', 'modal');
   }
-  
+
 });
 /** login */
-const loginBtn= document.querySelector(".loginBtn");
-loginBtn.addEventListener('click', function() {
+const loginBtn = document.querySelector(".loginBtn");
+loginBtn.addEventListener('click', function () {
   const password2 = document.querySelector('#pwd0');
   const errorPass = document.querySelector('#errorPassw0');
   const errorEm = document.querySelector('#errorEm0');
@@ -232,11 +232,11 @@ loginBtn.addEventListener('click', function() {
 
   const emailValue = emailInput.value;
 
-let isValid = true; // Variable para realizar un seguimiento de la validación
-let isValidEmail = true;
+  let isValid = true; // Variable para realizar un seguimiento de la validación
+  let isValidEmail = true;
 
-const emailPattern = /^[a-zA-Z0-9._-]{6,}@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}){1,}$/;
-  if (!emailPattern.test(emailValue) || emailValue=='')  {
+  const emailPattern = /^[a-zA-Z0-9._-]{6,}@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}){1,}$/;
+  if (!emailPattern.test(emailValue) || emailValue == '') {
     errorEm.innerHTML = `<p class="text m-2">Invalid mail.</p>`;
     isValidEmail = false;
   }
@@ -247,13 +247,13 @@ const emailPattern = /^[a-zA-Z0-9._-]{6,}@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}){1,}$/;
   if (password2Value.length < 8 || password2Value.length > 12) {
     errorPass.textContent = "The password must be between 8 and 12 characters.";
     isValid = false; // Establecer isValid en falso si hay un error
-  } 
+  }
 
   if (isValid && isValidEmail) {
     // Si las contraseñas son válidas, agrega el atributo data-bs-dismiss al botón
-    loginBtn.setAttribute('type','submit');
+    loginBtn.setAttribute('type', 'submit');
     loginBtn.setAttribute('data-bs-dismiss', 'modal');
   }
-  
+
 });
 
