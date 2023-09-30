@@ -18,12 +18,12 @@ fetch(enlace)
 
 
 const data = JSON.parse(localStorage.getItem('objeto'));
-
 // Verificar si se pudo obtener el objeto del localStorage
 if (!data) {
   console.log('No se pudo obtener el objeto del localStorage');
 } else {
-  const objeto = data;
+  let vara= data.filter((e)=> e.name.common!=='Falkland Islands')
+const objeto = vara;
 
   // Función para agregar tarjetas al contenedor
   function agregarTarjetas(paises) {
@@ -34,7 +34,6 @@ if (!data) {
       const nombreB = b.name.common.toLowerCase();
       return nombreA.localeCompare(nombreB);
     });
-
     contenedor.innerHTML = '';
 
     paises.forEach((pais, index) => {
@@ -83,7 +82,8 @@ if (!data) {
   botonesNav.forEach((boton) => {
     boton.addEventListener('click', () => {
       const nombreContinente = boton.textContent;
-      const paises = Object.values(objeto);
+      let paises = Object.values(objeto);
+
       let paiss = [];
       for (let e of paises) {
         if (e.continents.includes(nombreContinente) || e.continents.some((cont) => cont.includes(nombreContinente))) {
@@ -104,7 +104,8 @@ if (!data) {
   //  función de búsqueda en el objeto JSON
   function buscarPais(valorinput) {
     const valor = valorinput.trim().toLowerCase();
-    const paises = Object.values(objeto);
+    let paises = Object.values(objeto);
+
     let paiss = [];
 
     for (let e of paises) {
