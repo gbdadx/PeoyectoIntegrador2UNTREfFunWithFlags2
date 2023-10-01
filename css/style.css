@@ -296,21 +296,6 @@ input {
         justify-content: center;
     }
 
-    #footer {
-        display: flex;
-        flex-direction: row !important;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 100%;
-    }
-
-    #footer div {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 40%;
-    }
 
     html {
         font-size: 1.125rem;
@@ -349,6 +334,24 @@ input {
 
 }
 
+@media(width>540px){
+    
+    #footer {
+        display: flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #footer div {
+        display: flex;
+        flex-direction: row!important;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+    }
+}
 @media(width <450px) {
 
     html {
