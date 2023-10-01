@@ -171,6 +171,15 @@ footer div a {
     padding: 0px !important;
 
 }
+.dark-mode .card{
+background-color: grey;
+color:white;
+}
+.dark-mode .card:hover{
+    background-color: #555;
+    color:white;
+    }
+    
 
 .card-img-top {
     height: 11rem;
