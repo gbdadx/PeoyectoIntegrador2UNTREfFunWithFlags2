@@ -43,9 +43,9 @@ if (!data) {
       const alt = pais.flags.alt || '';
       const bandera = pais.flags.png || pais.flags.svg || '';
 
-      const tarjeta = `<div class="card" style="width: 18rem;" >
-        <img src="${bandera}" class="card-img-top" alt="${alt}">
-        <div class="card-body">
+      const tarjeta = `<div class="btn btn-outline-secondary card " style="width: 18rem;" >
+        <img src="${bandera}" class="card-img-top" alt="${alt} ">
+        <div class="card-body ">
           <h5 class="card-title">${nombreComun}</h5>
           <p class="card-text">${nombreOficial}</p>
           <p class="card-text">Continent: ${continente}</p>
