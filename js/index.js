@@ -247,7 +247,7 @@ loginBtn.addEventListener('click', function () {
 
   errorPass.textContent = ""; // Limpia el mensaje de error antes de realizar la validación
 
-  if (password2Value.length < 8 || password2Value.length > 12) {
+  if (password2Value.length < 8 || password2Value.length > 12 || password2Value=='') {
     errorPass.textContent = "The password must be between 8 and 12 characters.";
     isValid = false; // Establecer isValid en falso si hay un error
   }
