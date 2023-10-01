@@ -167,16 +167,16 @@ footer div a {
     align-items: flex-start;
     justify-content: space-evenly;
     text-align: left;
-    margin:0px!important;
-    padding: 0px!important;
+    margin: 0px !important;
+    padding: 0px !important;
 
 }
 
 .card-img-top {
     height: 11rem;
     width: 100%;
-    margin:0px!important;
-    padding: 0px!important;
+    margin: 0px !important;
+    padding: 0px !important;
 }
 
 .btnCard {
@@ -234,6 +234,23 @@ input {
     color: white;
 }
 
+.about p,
+.about a {
+    color: white;
+}
+
+.login p,
+#errorEm,
+.errorPassw2,
+.errorPassw {
+    color: rgb(146, 5, 33);
+    font-weight: 600;
+}
+
+.login a {
+    color: bisque;
+}
+
 /*fin modals */
 
 /**detgalle */
@@ -241,6 +258,7 @@ input {
 .dark-mode #h1detalle {
     color: antiquewhite !important;
 }
+
 .imagenDetalle1 {
     width: 70%;
 }
@@ -334,8 +352,8 @@ input {
 
 }
 
-@media(width>540px){
-    
+@media(width>540px) {
+
     #footer {
         display: flex;
         flex-direction: row !important;
@@ -346,12 +364,13 @@ input {
 
     #footer div {
         display: flex;
-        flex-direction: row!important;
+        flex-direction: row !important;
         align-items: center;
         justify-content: center;
         width: 40%;
     }
 }
+
 @media(width <450px) {
 
     html {
@@ -363,7 +382,8 @@ input {
     html {
         font-size: .75rem;
     }
-.fa-globe{
-        display:none;
+
+    .fa-globe {
+        display: none;
     }
 }

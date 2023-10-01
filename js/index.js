@@ -189,6 +189,8 @@ registerBtn.addEventListener('click', function () {
   const password1 = document.querySelector('#pwd2');
   const password2 = document.querySelector('#pwd3');
   const errorPass = document.querySelector('.errorPassw');
+  const errorPass2 = document.querySelector('.errorPassw2');
+
   const errorEm = document.querySelector('#errorEm');
   const emailInput = document.querySelector('#uname');
 
@@ -207,11 +209,12 @@ registerBtn.addEventListener('click', function () {
 
   errorPass.textContent = ""; // Limpia el mensaje de error antes de realizar la validación
 
-  if (password1Value.length < 8 || password1Value.length > 12) {
-    errorPass.textContent = "The password must be between 8 and 12 characters.";
+  if ((password1Value.length < 8 || password1Value.length > 12)||(password2Value.length < 8 || password2Value.length > 12)) {
+    errorPass.innerText = `The password must be between 8 and 12 characters.`;
     isValid = false; // Establecer isValid en falso si hay un error
-  } else if (password1Value !== password2Value) {
-    errorPass.textContent = "Passwords do not match.";
+  } 
+   if (password1Value !== password2Value) {
+    errorPass2.innerText = `Passwords do not match.`;
     isValid = false; // Establecer isValid en falso si hay un error
   }
 
