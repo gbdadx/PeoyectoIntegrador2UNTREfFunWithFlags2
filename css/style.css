@@ -234,8 +234,7 @@ input {
     color: white;
 }
 
-.about p,
-.about a {
+.about p {
     color: white;
 }
 
@@ -247,8 +246,9 @@ input {
     font-weight: 600;
 }
 
-.login a {
+.about a {
     color: bisque;
+    font-weight: 600;
 }
 
 /*fin modals */
