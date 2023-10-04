@@ -1,5 +1,4 @@
-
-// Recuperar el objeto pais almacenado en localStorage
+/* Recuperar el objeto pais almacenado en localStorage*/
 const pais = JSON.parse(localStorage.getItem('pais'));
 console.log(pais)
 
@@ -45,15 +44,7 @@ function fillingAsideDetails(pais) {
     console.log(`google maps address: ${small4}`)
     console.log(`openStreetMaps  ${pais.maps.openStreetMaps}`)
 
-    /** trabajo con mapa y leafleat */
-    /*let latitud=pais.latlng[0];
-    let longitud=pais.latlng[1];
-    let enlaceMapa=pais.maps.openStreetMaps;
-    var map = L.map('map').setView([latitud, longitud], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);*/
+    
 
     // Trabajar con mapa y Leaflet
     let latitud = pais.latlng[0];
@@ -104,20 +95,3 @@ btnDreturn.addEventListener('click', (e) => {
     window.location.href = './index.html';
 });
 
-
-/*  incorporar link de national anthems info .*/
-// https://nationalanthems.info/es.htm
-// const anthem= pais.cca2.htm;
-
-
-/*color mode */
-const body = document.body;
-
-
-// Comprobar la preferencia almacenada y aplicarla al cargar la página
-const savedColorMode = localStorage.getItem('colorMode');
-if (savedColorMode === 'dark') {
-    body.classList.add('dark-mode');
-} else if (savedColorMode === 'light') {
-    body.classList.add('light-mode');
-}

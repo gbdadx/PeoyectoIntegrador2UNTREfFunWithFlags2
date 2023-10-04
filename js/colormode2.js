@@ -1,4 +1,3 @@
-
 /** color mode */
 const body = document.body;
 
