@@ -60,10 +60,10 @@ let latitud = pais.latlng[0];
 let longitud = pais.latlng[1];
 let enlaceMapa = pais.maps.openStreetMaps;
 
-var map = L.map('map').setView([latitud, longitud], 13);
+var map = L.map('map').setView([latitud, longitud], 6);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 10,
+    maxZoom: 13,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
