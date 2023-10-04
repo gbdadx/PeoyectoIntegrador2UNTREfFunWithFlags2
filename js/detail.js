@@ -2,6 +2,9 @@
 const pais = JSON.parse(localStorage.getItem('pais'));
 console.log(pais)
 
+const asideTitle = document.querySelector('.ListGroup');
+let aux = `<h1 id='h1detalle'>${pais.name.common}</h1>`;
+asideTitle.innerHTML = aux;
 
 const mapa = document.querySelector('.lead');
 let imagen = pais.coatOfArms.png ?? pais.coatOfArms.svg ?? './img/bazinga.png';
@@ -86,9 +89,6 @@ function fillingAsideDetails(pais) {
 }
 fillingAsideDetails(pais)
 
-const asideTitle = document.querySelector('.ListGroup');
-let aux = `<h1 id='h1detalle'>${pais.name.common}</h1>`;
-asideTitle.innerHTML = aux;
 btnDreturn.addEventListener('click', (e) => {
     e.stopPropagation();
     localStorage.removeItem('pais');

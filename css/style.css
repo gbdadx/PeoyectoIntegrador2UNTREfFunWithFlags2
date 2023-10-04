@@ -338,6 +338,8 @@ source: https://freefrontend.com/css-spinners/
     padding:1rem;
    margin-right: auto;
    margin-left: auto;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
 }
 .buttonsContainer {
     display: flex;
