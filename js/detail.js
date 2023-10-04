@@ -19,7 +19,6 @@ function fillingAsideDetails(pais) {
     const small2 = pais.startOfWeek;
     const small3 = pais.population;
     const small4 = pais.maps.googleMaps;
-
     const costoVidaCapital = `https://www.numbeo.com/cost-of-living/in/${small1}`;
     const small5 = costoVidaCapital;
     const wiki = `https://en.wikipedia.org/wiki/${pa}`;
@@ -43,6 +42,33 @@ const demonyms= pais.demonyms.eng.m;
     sma5.innerHTML = `<p> <a href=" ${small5}" target="_blank">Cost Of Living (NUMBEO)</a>    </p>`;
     sma6.innerHTML = `<p> <a href=" ${small6}" target="_blank">Wikipedia ${(pa)}</a>    </p>`;
     sma7.innerHTML = `<p> <a href=" ${small7}" target="_blank">National ${(demonyms)} Anthem</a>    </p>`;
+console.log(`google maps address: ${small4}`)
+console.log(`openStreetMaps  ${pais.maps.openStreetMaps}`)
+
+/** trabajo con mapa y leafleat */
+/*let latitud=pais.latlng[0];
+let longitud=pais.latlng[1];
+let enlaceMapa=pais.maps.openStreetMaps;
+var map = L.map('map').setView([latitud, longitud], 13);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);*/
+
+// Trabajar con mapa y Leaflet
+let latitud = pais.latlng[0];
+let longitud = pais.latlng[1];
+let enlaceMapa = pais.maps.openStreetMaps;
+
+var map = L.map('map').setView([latitud, longitud], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 10,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+
+
 
 }
 fillingAsideDetails(pais)

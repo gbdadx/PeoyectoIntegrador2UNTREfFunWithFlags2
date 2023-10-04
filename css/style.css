@@ -171,18 +171,21 @@ footer div a {
     padding: 0px !important;
 
 }
-.dark-mode .card{
-background-color: grey;
-color:white;
+
+.dark-mode .card {
+    background-color: grey;
+    color: white;
 }
-.dark-mode .card:hover{
+
+.dark-mode .card:hover {
     background-color: #555;
-    color:white;
-    }
-    
-.card:hover{
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
-    
+    color: white;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
 .card-img-top {
     height: 11rem;
     width: 100%;
@@ -221,6 +224,7 @@ input {
     border: lightgrey .125rem solid;
     z-index: 1500;
 }
+
 /*   spiner*/
 /**
 Author Temani Afif  June 1, 2021
@@ -233,30 +237,39 @@ source: https://freefrontend.com/css-spinners/
     display: grid;
     border-radius: 50%;
     background:
-      linear-gradient(0deg ,rgb(0 0 0/50%) 30%,#0000 0 70%,rgb(0 0 0/100%) 0) 50%/8% 100%,
-      linear-gradient(90deg,rgb(0 0 0/25%) 30%,#0000 0 70%,rgb(0 0 0/75% ) 0) 50%/100% 8%;
+        linear-gradient(0deg, rgb(0 0 0/50%) 30%, #0000 0 70%, rgb(0 0 0/100%) 0) 50%/8% 100%,
+        linear-gradient(90deg, rgb(0 0 0/25%) 30%, #0000 0 70%, rgb(0 0 0/75%) 0) 50%/100% 8%;
     background-repeat: no-repeat;
     animation: s3 1s infinite steps(12);
-  }
-  .spinner-3::before,
-  .spinner-3::after {
-     content: "";
-     grid-area: 1/1;
-     border-radius: 50%;
-     background: inherit;
-     opacity: 0.915;
-     transform: rotate(30deg);
-  }
-  .spinner-3::after {
-     opacity: 0.83;
-     transform: rotate(60deg);
-  }
-  
-  @keyframes s3 {
-    100% {transform: rotate(1turn)}
-  }
-  
+}
+
+.spinner-3::before,
+.spinner-3::after {
+    content: "";
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: inherit;
+    opacity: 0.915;
+    transform: rotate(30deg);
+}
+
+.spinner-3::after {
+    opacity: 0.83;
+    transform: rotate(60deg);
+}
+
+@keyframes s3 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
 /* fin spiner */
+
+/**map leaflet style */
+#map {
+    height: 15rem;
+}
 
 /**modals */
 .modal {
@@ -288,7 +301,9 @@ source: https://freefrontend.com/css-spinners/
 .login p,
 #errorEm,
 .errorPassw2,
-.errorPassw,  #errorPassw0, #errorEm0 {
+.errorPassw,
+#errorPassw0,
+#errorEm0 {
     color: rgb(146, 5, 33);
     font-weight: 600;
 }
@@ -312,8 +327,18 @@ source: https://freefrontend.com/css-spinners/
 
 .main2 {
     margin-top: 0;
+    font-size: 0.85rem;
+    line-height: 0.85rem;
 }
 
+.small1{
+    margin-top: 1rem;
+}
+#map{
+    padding:1rem;
+   margin-right: auto;
+   margin-left: auto;
+}
 .buttonsContainer {
     display: flex;
     flex-wrap: wrap;
