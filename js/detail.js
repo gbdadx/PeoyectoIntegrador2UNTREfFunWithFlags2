@@ -77,7 +77,8 @@ function fillingAsideDetails(pais) {
             attribution: '©OpenStreetMap, ©CartoDB',
             pane: 'labels'
     }).addTo(map);
-    
+    L.geoJSON(geojsonFeature).addTo(map);
+
     var geojson = L.geoJson(GeoJsonData, geoJsonOptions).addTo(map);
     geojson.eachLayer(function (layer) {
         layer.bindPopup(layer.feature.properties.name);

@@ -6,43 +6,31 @@ let enlace = 'https://restcountries.com/v3.1/independent?status=true';
 fetch(enlace)
   .then(response => response.json())
   .then(data => {
-    localStorage.setItem("objeto", JSON.stringify(data));
-  })
-  .catch(error => console.error('Error:', error));
-
-
-/**
- * leer el localstorage: objeto
- */
-
-
-
-const data = JSON.parse(localStorage.getItem('objeto'));
-// Verificar si se pudo obtener el objeto del localStorage
-if (!data) {
-  console.log('No se pudo obtener el objeto del localStorage');
-} else {
-  const objeto = data;
+   let objeto=data.reverse();
+  console.log(`typeof objeto  ${typeof (objeto)}`)
+  console.log(`objeto is Array?  ${Array.isArray(objeto)}`)
 
   // Función para agregar tarjetas al contenedor
   function agregarTarjetas(paises) {
-    const contenedor = document.querySelector('.contenedor');
+      const contenedor = document.querySelector('.contenedor');
+      /*
+          paises.sort((a, b) => { // ordena paises
+            const nombreA = a.name.common.toLowerCase();
+            const nombreB = b.name.common.toLowerCase();
+            return nombreA.localeCompare(nombreB);
+          });*/
 
-    paises.sort((a, b) => {
-      const nombreA = a.name.common.toLowerCase();
-      const nombreB = b.name.common.toLowerCase();
-      return nombreA.localeCompare(nombreB);
-    });
-    contenedor.innerHTML = '';
 
-    paises.forEach((pais, index) => {
-      const nombreComun = pais.name.common || '';
-      const nombreOficial = pais.name.official || '';
-      const continente = pais.continents ? pais.continents.join(', ') : '';
-      const alt = pais.flags.alt || '';
-      const bandera = pais.flags.png || pais.flags.svg || '';
+      contenedor.innerHTML = '';
 
-      const tarjeta = `<div class="btn btn-outline-secondary card " style="width: 18rem;" >
+      paises.forEach((pais, index) => {
+        const nombreComun = pais.name.common || '';
+        const nombreOficial = pais.name.official || '';
+        const continente = pais.continents ? pais.continents.join(', ') : '';
+        const alt = pais.flags.alt || '';
+        const bandera = pais.flags.png || pais.flags.svg || '';
+
+        const tarjeta = `<div class="btn btn-outline-secondary card " style="width: 18rem;" >
         <img src="${bandera}" class="card-img-top" alt="${alt} ">
         <div class="card-body ">
           <h5 class="card-title">${nombreComun}</h5>
@@ -52,83 +40,97 @@ if (!data) {
         </div>
       </div>`;
 
-      contenedor.innerHTML += tarjeta;
-    });
+        contenedor.innerHTML += tarjeta;
+      });
 
-    eventoBtnTarjetas(paises);
-  }
+      eventoBtnTarjetas(paises);
+    }
 
   // Función para agregar eventos a los botones en las tarjetas
   function eventoBtnTarjetas(paises) {
-    const btnTarjetas = document.querySelectorAll('.btnCard');
-    btnTarjetas.forEach((btn) => {
-      btn.addEventListener('click', (event) => {
-        event.preventDefault();
-        const index = btn.getAttribute('data-index');
-        const indexNum = parseInt(index, 10);
-        const pais = paises[indexNum];
-        localStorage.setItem('pais', JSON.stringify(pais));
-        window.location.href = './detalle.html';
+      const btnTarjetas = document.querySelectorAll('.btnCard');
+      btnTarjetas.forEach((btn) => {
+        btn.addEventListener('click', (event) => {
+          event.preventDefault();
+          const index = btn.getAttribute('data-index');
+          const indexNum = parseInt(index, 10);
+          const pais = paises[indexNum];
+          localStorage.setItem('pais', JSON.stringify(pais));
+          window.location.href = './detalle.html';
+        });
       });
-    });
-  }
+    }
 
   // Llamar a la función para cargar las tarjetas iniciales
   agregarTarjetas(objeto);
 
-  /**eventos botones del nav: selecciona por continente */
-  const botonesNav = document.querySelectorAll('.btnCont');
-  botonesNav.forEach((boton) => {
-    boton.addEventListener('click', () => {
-      const nombreContinente = boton.textContent;
-      let paises = Object.values(objeto);
-
-      let paiss = [];
-      for (let e of paises) {
-        if (e.continents.includes(nombreContinente) || e.continents.some((cont) => cont.includes(nombreContinente))) {
-          paiss.push(e);
-        }
-      }
-      agregarTarjetas(paiss);
-      searchCountry.value = '';
-    });
-  });
-
-  /*eventos Search */
-
-  let temporizador;
-
-  const searchCountry = document.querySelector('#barraSearch');
-
-  //  función de búsqueda en el objeto JSON
-  function buscarPais(valorinput) {
-    const valor = valorinput.trim().toLowerCase();
+/**eventos botones del nav: selecciona por continente */
+const botonesNav = document.querySelectorAll('.btnCont');
+botonesNav.forEach((boton) => {
+  boton.addEventListener('click', () => {
+    const nombreContinente = boton.textContent;
     let paises = Object.values(objeto);
 
     let paiss = [];
-
     for (let e of paises) {
-      const nombreComun = e.name.common.toLowerCase();
-      const nombreOficial = e.name.official.toLowerCase();
-
-      if (
-        (nombreComun.length >= 4 && nombreComun.includes(valor)) ||
-        (nombreOficial.length >= 4 && nombreOficial.includes(valor))
-      ) {
+      if (e.continents.includes(nombreContinente) || e.continents.some((cont) => cont.includes(nombreContinente))) {
         paiss.push(e);
       }
     }
     agregarTarjetas(paiss);
-  };
-  searchCountry.addEventListener('input', function (e) {
-    clearTimeout(temporizador);
-    temporizador = setTimeout(function () {
-      const valorInput = e.target.value;
-      buscarPais(valorInput);
-    }, 300); // 300 milisegundos 
+    searchCountry.value = '';
   });
+});
 
-}//fin ELSE de Verificar si se pudo obtener el objeto del localStorage
+/*eventos Search */
+
+let temporizador;
+
+const searchCountry = document.querySelector('#barraSearch');
+
+//  función de búsqueda en el objeto JSON
+function buscarPais(valorinput) {
+  const valor = valorinput.trim().toLowerCase();
+  let paises = Object.values(objeto);
+
+  let paiss = [];
+
+  for (let e of paises) {
+    const nombreComun = e.name.common.toLowerCase();
+    const nombreOficial = e.name.official.toLowerCase();
+
+    if (
+      (nombreComun.length >= 4 && nombreComun.includes(valor)) ||
+      (nombreOficial.length >= 4 && nombreOficial.includes(valor))
+    ) {
+      paiss.push(e);
+    }
+  }
+  agregarTarjetas(paiss);
+};
+searchCountry.addEventListener('input', function (e) {
+  clearTimeout(temporizador);
+  temporizador = setTimeout(function () {
+    const valorInput = e.target.value;
+    buscarPais(valorInput);
+  }, 300); // 300 milisegundos 
+});
+
+/** get random countries */
+function random_item(ob) {
+
+  return ob[Math.floor(Math.random() * ob.length)];
+
+}
+console.log(random_item(objeto))
+console.log(random_item(objeto))
+console.log(random_item(objeto.name[0]))
+  /** fin random */
+
+})
+.catch (error => console.error('Error:', error));
+/** FIN DEL FETCH Y ASINCRONISO */
+
 
 /** botones scroll */
 const contenedor = document.getElementById('contenedor');
@@ -208,11 +210,11 @@ registerBtn.addEventListener('click', function () {
 
   errorPass.textContent = ""; // Limpia el mensaje de error antes de realizar la validación
 
-  if ((password1Value.length < 8 || password1Value.length > 12)||(password2Value.length < 8 || password2Value.length > 12)) {
+  if ((password1Value.length < 8 || password1Value.length > 12) || (password2Value.length < 8 || password2Value.length > 12)) {
     errorPass.innerText = `The password must be between 8 and 12 characters.`;
     isValid = false; // Establecer isValid en falso si hay un error
-  } 
-   if (password1Value !== password2Value) {
+  }
+  if (password1Value !== password2Value) {
     errorPass2.innerText = `Passwords do not match.`;
     isValid = false; // Establecer isValid en falso si hay un error
   }
@@ -246,7 +248,7 @@ loginBtn.addEventListener('click', function () {
 
   errorPass.textContent = ""; // Limpia el mensaje de error antes de realizar la validación
 
-  if (password2Value.length < 8 || password2Value.length > 12 || password2Value=='') {
+  if (password2Value.length < 8 || password2Value.length > 12 || password2Value == '') {
     errorPass.textContent = "The password must be between 8 and 12 characters.";
     isValid = false; // Establecer isValid en falso si hay un error
   }
@@ -258,4 +260,3 @@ loginBtn.addEventListener('click', function () {
   }
 
 });
-

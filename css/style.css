@@ -322,7 +322,7 @@ source: https://freefrontend.com/css-spinners/
 }
 
 .imagenDetalle1 {
-    width: 70%;
+    width: 100%;
 }
 
 .main2 {
@@ -340,6 +340,7 @@ source: https://freefrontend.com/css-spinners/
    margin-left: auto;
    margin-top: 1rem;
    margin-bottom: 1rem;
+   height:50vh;
 }
 .buttonsContainer {
     display: flex;
