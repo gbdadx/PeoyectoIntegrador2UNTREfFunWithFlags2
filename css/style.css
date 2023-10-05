@@ -242,6 +242,12 @@ source: https://freefrontend.com/css-spinners/
     background-repeat: no-repeat;
     animation: s3 1s infinite steps(12);
 }
+.dark-mode .spinner-3{
+    background:
+    linear-gradient(0deg, rgb(255 255 255/50%) 30%, #fff 0 70%, rgb(255 255 255/100%) 0) 50%/8% 100%,
+    linear-gradient(90deg, rgb(255 255 255/25%) 30%, #fff 0 70%, rgb(255 255 255/75%) 0) 50%/100% 8%;
+background-repeat: no-repeat;
+}
 
 .spinner-3::before,
 .spinner-3::after {
